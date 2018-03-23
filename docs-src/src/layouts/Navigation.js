@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Menu from 'possum/lib/Menu'
-import Card from 'possum/lib/Card'
-import Drawer from 'possum/lib/Drawer'
+import Menu from 'awesome-possum/lib/Menu'
+import Card from 'awesome-possum/lib/Card'
+import Drawer from 'awesome-possum/lib/Drawer'
 import packageInfo from '../../../package.json'
 
 export default function Navigation() {
@@ -24,7 +24,7 @@ export default function Navigation() {
         </Menu>
         <Menu vertical>
           <Menu.Item text><h5>Starter</h5></Menu.Item>
-          <Menu.Item><Link to="/settings-templates/settings-templates.zip">SCSS Starter Settings</Link></Menu.Item>
+          <Menu.Item><a href="/settings-templates/settings-templates.zip" download>Download Starter Settings</a></Menu.Item>
         </Menu>
         <Menu vertical>
           <Menu.Item text><h5>Grid</h5></Menu.Item>
@@ -38,7 +38,6 @@ export default function Navigation() {
           <Menu.Item><Link to="/components/Datepicker/">Date Picker</Link></Menu.Item>
           <Menu.Item><Link to="/components/Input/">Inputs</Link></Menu.Item>
           <Menu.Item><Link to="/components/InputGroup/">Input Group</Link></Menu.Item>
-          <Menu.Item><Link to="/components/Label/">Labels</Link></Menu.Item>
           <Menu.Item><Link to="/components/Radio/">Radio Buttons</Link></Menu.Item>
           <Menu.Item><Link to="/components/Select/">Selects</Link></Menu.Item>
           <Menu.Item><Link to="/components/Textarea/">Textareas</Link></Menu.Item>
@@ -59,6 +58,8 @@ export default function Navigation() {
           <Menu.Item text><h5>Navigation</h5></Menu.Item>
           <Menu.Item><Link to="/components/Menu/">Menu</Link></Menu.Item>
           <Menu.Item><Link to="/components/TopBar/">Top Bar</Link></Menu.Item>
+          <Menu.Item><Link to="/components/Drawer/">Stateful Drawer</Link></Menu.Item>
+          <Menu.Item><Link to="/components/StatelessDrawer/">StatelessDrawer</Link></Menu.Item>
         </Menu>
         <Menu vertical>
           <Menu.Item text><h5>Cards &amp; Media</h5></Menu.Item>

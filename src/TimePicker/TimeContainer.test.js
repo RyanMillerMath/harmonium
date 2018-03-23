@@ -1,6 +1,7 @@
 import TimeContainer from './TimeContainer'
 import { DateTime, Duration } from 'luxon'
 import sinon from 'sinon'
+import timekeeper from 'timekeeper'
 
 describe('TimeContainer', () => {
   it('should render without throwing', () => {
@@ -115,10 +116,10 @@ describe('TimeContainer', () => {
       .find('button.rev-TimeTicker-button--next')
       .at(2)
       .simulate('click', { preventDefault: () => null })
-      const testTime = DateTime.local().plus(Duration.fromObject({ seconds: 1 }))
-      const testSecond = testTime.second.toString()
+
       //cast time text to number to unformat 0 in front of single digits so that test passes for single digits
       const second = (+container.find('.rev-TimeTicker-value').at(2).text()).toString()
+      timekeeper.reset();
 
       expect(second).to.equal(testSecond)
   })
